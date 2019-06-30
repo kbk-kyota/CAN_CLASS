@@ -1,0 +1,12 @@
+CanClass.cpp:10:1:CanClass::CanClass()	16	static
+CanClass.cpp:14:6:void CanClass::init()	16	static
+CanClass.cpp:32:6:void CanClass::can_set_filter(uint32_t, uint32_t)	24	static
+CanClass.cpp:62:6:void CanClass::can_enable()	16	static
+CanClass.cpp:102:6:void CanClass::can_disable()	16	static
+CanClass.cpp:115:6:void CanClass::can_set_bitrate(can_bitrate)	16	static
+CanClass.cpp:155:6:void CanClass::can_set_silent(uint8_t)	16	static
+CanClass.cpp:172:10:uint32_t CanClass::can_tx(CAN_TxHeaderTypeDef*, uint8_t (&)[8])	32	static
+CanClass.cpp:186:10:uint32_t CanClass::can_rx(CAN_RxHeaderTypeDef*, uint8_t (&)[8])	32	static
+CanClass.cpp:196:9:uint8_t CanClass::is_can_msg_pending(uint8_t)	16	static
+CanClass.cpp:205:6:void CanClass::endit()	16	static
+CanClass.cpp:209:6:void CanClass::Error_Handler()	16	static
