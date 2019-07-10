@@ -16,6 +16,7 @@ void main_cpp(void) {
     while(1){
     	can.send(X,0x205);
     	can.send(Y,0x206);
+    	can.led_process();
 		HAL_Delay(50);
     }
 

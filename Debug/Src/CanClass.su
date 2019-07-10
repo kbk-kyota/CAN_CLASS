@@ -9,4 +9,6 @@ CanClass.cpp:172:10:uint32_t CanClass::can_tx(CAN_TxHeaderTypeDef*, uint8_t (&)[
 CanClass.cpp:186:10:uint32_t CanClass::can_rx(CAN_RxHeaderTypeDef*, uint8_t (&)[8])	32	static
 CanClass.cpp:196:9:uint8_t CanClass::is_can_msg_pending(uint8_t)	16	static
 CanClass.cpp:205:6:void CanClass::endit()	16	static
-CanClass.cpp:209:6:void CanClass::Error_Handler()	16	static
+CanClass.cpp:211:6:void CanClass::led_on()	16	static
+CanClass.cpp:223:6:void CanClass::led_process()	16	static
+CanClass.cpp:234:6:void CanClass::Error_Handler()	16	static

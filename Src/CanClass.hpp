@@ -29,6 +29,7 @@ enum can_bus_state {
 };
 
 #define CAN_MTU 8
+#define LED_DURATION 10
 
 template<typename T>
 union _Encapsulator
@@ -46,6 +47,8 @@ private:
 	uint8_t rx_payload[CAN_MTU];
 	uint32_t status;
 	uint8_t rx_flag = 0;
+	uint32_t led_laston = 0;
+	uint32_t led_lastoff = 0;
 	CAN_FilterTypeDef filter;
 	uint32_t prescaler;
 	enum can_bus_state bus_state;
@@ -67,6 +70,8 @@ public:
 	void receive(T &data,uint32_t id);
 	void init(void);
 	void endit(void);
+	void led_on(void);
+	void led_process(void);
 };
 
 template<typename T>

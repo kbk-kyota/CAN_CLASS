@@ -1,6 +1,6 @@
 wrapper.cpp:14:6:void main_cpp()	24	static
-wrapper.cpp:24:6:void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef*)	16	static
-CanClass.hpp:73:6:void CanClass::send(T, uint32_t) [with T = double]	48	static
-CanClass.hpp:89:6:void CanClass::receive(T&, uint32_t) [with T = double]	48	static
-wrapper.cpp:29:1:void __static_initialization_and_destruction_0(int, int)	16	static
-wrapper.cpp:29:1:cpp)	8	static
+wrapper.cpp:25:6:void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef*)	16	static
+CanClass.hpp:78:6:void CanClass::send(T, uint32_t) [with T = double]	48	static
+CanClass.hpp:94:6:void CanClass::receive(T&, uint32_t) [with T = double]	48	static
+wrapper.cpp:30:1:void __static_initialization_and_destruction_0(int, int)	16	static
+wrapper.cpp:30:1:cpp)	8	static
