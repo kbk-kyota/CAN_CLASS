@@ -20,7 +20,7 @@ Src/wrapper.o: ../Src/wrapper.cpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Src/wrapper.hpp ../Src/CanClass.hpp \
+ ../Inc/wrapper.hpp ../Inc/CanClass.hpp \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -65,8 +65,8 @@ Src/wrapper.o: ../Src/wrapper.cpp \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 
-../Src/wrapper.hpp:
+../Inc/wrapper.hpp:
 
-../Src/CanClass.hpp:
+../Inc/CanClass.hpp:
 
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:

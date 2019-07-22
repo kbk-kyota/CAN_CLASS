@@ -39,21 +39,21 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-CanClass.elf \
+CAN_CLASS.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-CanClass.list \
+CAN_CLASS.list \
 
 
 # All Target
-all: CanClass.elf secondary-outputs
+all: CAN_CLASS.elf secondary-outputs
 
 # Tool invocations
-CanClass.elf: $(OBJS) $(USER_OBJS) /home/ryu/STM32CubeIDE/workspace_1.0.0/CanClass/STM32F103C8TX_FLASH.ld
-	arm-none-eabi-g++ -o "CanClass.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/ryu/STM32CubeIDE/workspace_1.0.0/CanClass/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CanClass.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+CAN_CLASS.elf: $(OBJS) $(USER_OBJS) /home/ryu/STM32CubeIDE/workspace_1.0.1/CAN_CLASS/STM32F103C8TX_FLASH.ld
+	arm-none-eabi-g++ -o "CAN_CLASS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/ryu/STM32CubeIDE/workspace_1.0.1/CAN_CLASS/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CAN_CLASS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -62,8 +62,8 @@ default.size.stdout: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-CanClass.list: $(EXECUTABLES)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "CanClass.list"
+CAN_CLASS.list: $(EXECUTABLES)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "CAN_CLASS.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
