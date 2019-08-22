@@ -96,7 +96,7 @@ void CanClass::can_enable(void)
         }
     }
 
-    GPIOB->BSRR = GPIO_BSRR_BS1;
+    GPIOB->BSRR = GPIO_BSRR_BS0;
 }
 
 void CanClass::can_disable(void)
@@ -108,8 +108,8 @@ void CanClass::can_disable(void)
         bus_state = OFF_BUS;
     }
 
-    GPIOB->BSRR = GPIO_BSRR_BR1;
-    GPIOC->BSRR = GPIO_BSRR_BR13;
+    GPIOB->BSRR = GPIO_BSRR_BR0;
+    GPIOA->BSRR = GPIO_BSRR_BR11;
 }
 
 void CanClass::can_set_bitrate(enum can_bitrate bitrate)
@@ -176,8 +176,8 @@ uint32_t CanClass::can_tx(CAN_TxHeaderTypeDef *tx_header, uint8_t (&buf)[CAN_MTU
     uint32_t tx_mailbox;
     status = HAL_CAN_AddTxMessage(&hcan, tx_header, buf, &tx_mailbox);
 
-    GPIOC->BSRR=GPIO_BSRR_BS13;
-    GPIOC->BSRR=GPIO_BSRR_BR13;
+    GPIOA->BSRR=GPIO_BSRR_BS11;
+    GPIOA->BSRR=GPIO_BSRR_BR11;
 
     //led_on();
     return status;
@@ -214,7 +214,7 @@ void CanClass::led_on(void)
 	// This prevents a solid status LED on a busy canbus
 	if(led_laston == 0 && HAL_GetTick() - led_lastoff > LED_DURATION)
 	{
-	    GPIOC->BSRR = GPIO_BSRR_BS13;
+	    GPIOA->BSRR = GPIO_BSRR_BS11;
 		led_laston = HAL_GetTick();
 	}
 }
@@ -225,7 +225,7 @@ void CanClass::led_process(void)
 	// If LED has been on for long enough, turn it off
 	if(led_laston > 0 && HAL_GetTick() - led_laston > LED_DURATION)
 	{
-        GPIOC->BSRR = GPIO_BSRR_BR13;
+        GPIOA->BSRR = GPIO_BSRR_BR11;
 		led_laston = 0;
 		led_lastoff = HAL_GetTick();
 	}
