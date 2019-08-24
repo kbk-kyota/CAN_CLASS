@@ -1,5 +1,5 @@
-wrapper.cpp:13:6:void main_cpp()	8	static
-wrapper.cpp:37:6:void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef*)	24	static,ignoring_inline_asm
+wrapper.cpp:14:6:void main_cpp()	8	static
+wrapper.cpp:50:6:void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef*)	16	static
 CanClass.hpp:94:6:void CanClass::receive(T&, uint32_t) [with T = unsigned char]	48	static
-wrapper.cpp:126:1:void __static_initialization_and_destruction_0(int, int)	16	static
-wrapper.cpp:126:1:cpp)	8	static
+wrapper.cpp:79:1:void __static_initialization_and_destruction_0(int, int)	16	static
+wrapper.cpp:79:1:cpp)	8	static
